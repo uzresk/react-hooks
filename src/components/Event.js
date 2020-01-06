@@ -1,5 +1,6 @@
 import React from "react";
 
+// 一覧の要素を表示するためのComponent
 const Event = ({dispatch, event}) => {
     const id = event.id;
     const handleClickDeleteButton = () => {
