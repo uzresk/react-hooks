@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import Event from "./Event";
+import {CREATE_EVENT, DELETE_ALL_EVENTS} from "../actions";
 
 const EventForm = ({state, dispatch}) => {
     const [title, setTitle] = useState('');
@@ -10,7 +10,7 @@ const EventForm = ({state, dispatch}) => {
         e.preventDefault();
         // dispatchするとstateにはいる。
         dispatch({
-            type: 'CREATE_EVENT', title, body
+            type: CREATE_EVENT, title, body
         });
         setTitle('');
         setBody('');
@@ -19,7 +19,7 @@ const EventForm = ({state, dispatch}) => {
     const deleteAllEvents = e => {
         e.preventDefault();
         const result = window.confirm('全てのイベントを本当に削除してもよいですか？');
-        if (result) dispatch({type: 'DELETE_ALL_EVENTS'})
+        if (result) dispatch({type: DELETE_ALL_EVENTS})
     };
 
     // イベントを作成するボタンの制御用
