@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Events from './Events'
 import EventForm from './EventForm'
+import OperationLogs from './OperationLogs'
 import AppContext from "../contexts/AppContext";
 import reducer from '../reducers'
 
@@ -20,6 +21,8 @@ const App = () => {
                 <EventForm/>
                 <hr/>
                 <Events/>
+                <hr/>
+                <OperationLogs/>
             </div>
         </AppContext.Provider>
     );
