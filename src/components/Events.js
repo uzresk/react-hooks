@@ -4,7 +4,7 @@ import AppContext from "../contexts/AppContext";
 
 // 一覧画面を表すComponent
 const Events = () => {
-    const {state} =useContext(AppContext);
+    const {state} = useContext(AppContext);
     return (
         <>
             <h4>イベント一覧</h4>
@@ -19,7 +19,7 @@ const Events = () => {
                 </tr>
                 </thead>
                 <tbody>
-                {state.map((event, index) => (<Event key={index} event={event}/>))}
+                {state.events.map((event, index) => (<Event key={index} event={event}/>))}
                 </tbody>
             </table>
         </>
